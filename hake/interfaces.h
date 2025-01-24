@@ -165,12 +165,12 @@ public:
 
 	CUserCmd* GetUserCmd(int sequence_num)
 	{
-		auto m_pCommands = *(CUserCmd**)(this + 196);
+		auto m_pCommands = *(CUserCmd**)(this + 0xE4);
 		return &(m_pCommands[sequence_num % 90]);
 	}
 	VerifiedCmd* GetVerifiedCmd(int sequence_num)
 	{
-		auto m_pVerifiedCommands = *(VerifiedCmd**)(this + 200);
+		auto m_pVerifiedCommands = *(VerifiedCmd**)(this + 0xE8);
 		return &(m_pVerifiedCommands[sequence_num % 90]);
 	}
 };

@@ -14,6 +14,8 @@ public:
 	{
 		bValid = false;
 		factory = nullptr;
+		scanStartAddr = 0;
+		scanEndAddr = 0;
 
 		hMod = GetModuleHandleA(moduleName);
 		if (!hMod)
